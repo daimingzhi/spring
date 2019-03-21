@@ -3,6 +3,7 @@ package com.spring.aop.config;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -15,7 +16,13 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @Aspect
 @ComponentScan("com.spring.aop.service")
-public class AopConfig {
+public class AopConfig implements InitializingBean {
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+
+    }
+
     //    @Pointcut("execution(* *.*.service.Test.*(..)) && within(com.spring.aop.*))")
 //    @Pointcut("execution(* *.*.service.Test.*(..)) && @within(com.spring.aop.AopAnnotation))")
 //    @Pointcut("execution(* *..service.Test.*(..))")

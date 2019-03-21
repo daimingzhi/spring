@@ -1,6 +1,7 @@
 package com.spring.aop.config;
 
 import com.spring.aop.service.MyInterface;
+import com.spring.aop.service.impl.MyInterfaceImpl;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.DeclareParents;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,7 +16,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Aspect
 @ComponentScan("com.spring.aop.service")
 @EnableAspectJAutoProxy
-public class EnhanceAop {
-    @DeclareParents(value = "(com.spring.aop.service.Test+)", defaultImpl = MyInterfaceImpl.class)
-    public static MyInterface myInterface;
+public class ProxyAop {
+    @DeclareParents(value = "(com.spring.aop.service.impl.TestImpl)", defaultImpl = MyInterfaceImpl.class)
+    public static MyInterface  myInterface;
 }
