@@ -6,4 +6,10 @@ package com.spring.aop.service;
  */
 public interface MyInterface {
     public void add();
+
+    /**
+     * @author dmz
+     * @date Create in 23:14 2019/3/16
+     */
+
 }

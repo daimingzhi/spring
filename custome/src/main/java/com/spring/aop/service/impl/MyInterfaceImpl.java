@@ -1,4 +1,4 @@
-package com.spring.aop.config;
+package com.spring.aop.service.impl;
 
 import com.spring.aop.service.MyInterface;
 import org.springframework.stereotype.Component;
