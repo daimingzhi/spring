@@ -1,9 +1,6 @@
 package com.spring.asycn;
 
-import com.spring.asycn.config.AsyncConfig;
-import com.spring.asycn.service.SyncService;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import java.text.DecimalFormat;
 
 /**
  * @Author: dmz
@@ -12,14 +9,15 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  */
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext applicationContext =
-                new AnnotationConfigApplicationContext(AsyncConfig.class);
-        SyncService bean = applicationContext.getBean(SyncService.class);
-        bean.test(1);
-        ThreadPoolTaskExecutor executor = applicationContext.getBean(ThreadPoolTaskExecutor.class);
-//        ThreadPoolTaskExecutor bean1 =applicationContext.getBean()
-//        bean1.shutdown();
-        executor.shutdown();
-
+//        AnnotationConfigApplicationContext applicationContext =
+//                new AnnotationConfigApplicationContext(AsyncConfig.class);
+//        SyncService bean = applicationContext.getBean(SyncService.class);
+//        bean.test(1);
+//        ThreadPoolTaskExecutor executor = applicationContext.getBean(ThreadPoolTaskExecutor.class);
+////        ThreadPoolTaskExecutor bean1 =applicationContext.getBean()
+////        bean1.shutdown();
+//        executor.shutdown();
+        Double pi = 13.1415926;
+        System.out.println(new DecimalFormat("0.000").format(pi));//3.14
     }
 }
