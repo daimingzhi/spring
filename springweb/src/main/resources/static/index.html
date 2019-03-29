@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<form name="punchout_form" method="post"
+      action="https://openapi.alipay.com/gateway.do?charset=UTF-8&method=alipay.trade.wap.pay&sign=jtMH0LFRp06q6bzhPimP%2Fdz%2Fv28zvZE3U52LTZSf6A04ZyyZabtAqAKeiqp%2B9A6RehvkMrd2%2Fr7qbV9z2F0kIwJHfJmmUxmQB0e1LhXzVJ7H4uthKRsky7dN5VRkcxFUSKDxsjRkiuP5lRMAMYiZaG6hOk1I2cnsYQzFACCIU5lGNdNH5tQNEIGpXYDB4qRVxphb54ySrIhkg3mExwrhGfnAEO%2F5mUftuoRKH0Qep4m4BHg0JxdeZFEAhPMmEcfNP%2FJu8Z3hsuNglWU3x63Lnx%2F9cEFkJQl%2Bkw4w0jY49S1%2BKAluJB7uiX4tmhEjiPausM49oimR1z1BorlxJff35Q%3D%3D&return_url=http%3A%2F%2Ffat01-mall-h5.zykj.com%2F%23%2Fhome&notify_url=http%3A%2F%2Fdev-api-mall.zbankhome.com%3A8026%2Fpay%2FalipayCallback%2FaliPayReceive&version=1.0&app_id=2019032063593714&sign_type=RSA2&timestamp=2019-03-27+22%3A07%3A51&alipay_sdk=alipay-sdk-java-3.7.4.ALL&format=json">
+    <input type="hidden" name="biz_content"
+           value="{&quot;body&quot;:&quot;我是测试数据&quot;,&quot;out_trade_no&quot;:&quot;KP2019032701646193112&quot;,&quot;product_code&quot;:&quot;QUICK_MSECURITY_PAY&quot;,&quot;subject&quot;:&quot;App支付测试Java&quot;,&quot;timeout_express&quot;:&quot;1c&quot;,&quot;total_amount&quot;:&quot;0.01&quot;}">
+    <input type="submit" value="立即支付" style="display:none">
+</form>
+<script>document.forms[0].submit();</script>
+</body>
+
+</html>
