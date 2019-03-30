@@ -1,5 +1,6 @@
 package com.study.spring.springweb.controller;
 
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping
 public class Controller {
-
-
+    public Controller(ApplicationContext applicationContext) {
+        System.out.println("11111");
+        System.out.println(applicationContext);
+    }
 }

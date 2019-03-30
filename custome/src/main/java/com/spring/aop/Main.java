@@ -1,7 +1,10 @@
 package com.spring.aop;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author dmz
@@ -21,6 +24,10 @@ public class Main {
 //        System.out.println(bean instanceof MyInterface);
 //        MyInterface bean3 = (MyInterface) bean;
 //        bean3.add();
-        SpringApplication.run(Main.class);
+        Date date = new Date();
+        DateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
+        String time = format.format(date);
+        System.out.println(time);
+//        SpringApplication.run(Main.class);
     }
 }
