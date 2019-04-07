@@ -107,7 +107,8 @@ public class AMQPConfig {
     public AMQP.Queue.DeclareOk declareFirstDelayDeadQueen(RabbitMQChannel rabbitMQChannel) {
 
         try {
-            return rabbitMQChannel.getChannel().queueDeclare("first-delay-dead-queen", true, false, false, null);
+            return rabbitMQChannel.getChannel().queueDeclare("first-delay-dead-queen",
+                    true, false, false, null);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -117,7 +118,8 @@ public class AMQPConfig {
     @Bean
     public AMQP.Queue.BindOk bindFirstDelayQueen(RabbitMQChannel rabbitMQChannel) {
         try {
-            return rabbitMQChannel.getChannel().queueBind("first-delay-queen", "first-delay-exchange", "first-delay", null);
+            return rabbitMQChannel.getChannel().queueBind("first-delay-queen",
+                    "first-delay-exchange", "first-delay", null);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -127,7 +129,8 @@ public class AMQPConfig {
     @Bean
     public AMQP.Queue.BindOk bindFirstDelayDeadQueen(RabbitMQChannel rabbitMQChannel) {
         try {
-            return rabbitMQChannel.getChannel().queueBind("first-delay-dead-queen", "first-delay-dead-exchange", "first-delay-dead", null);
+            return rabbitMQChannel.getChannel().queueBind("first-delay-dead-queen",
+                    "first-delay-dead-exchange", "first-delay-dead", null);
         } catch (IOException e) {
             e.printStackTrace();
         }

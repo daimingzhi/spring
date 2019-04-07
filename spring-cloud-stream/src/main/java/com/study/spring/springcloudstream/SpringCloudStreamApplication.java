@@ -10,7 +10,6 @@ import org.springframework.cloud.stream.messaging.Sink;
 @EnableBinding(Sink.class)
 public class SpringCloudStreamApplication {
     public static void main(String[] args) throws Exception{
-//        System.out.println(new ObjectMapper().writeValueAsString(map));
         SpringApplication.run(SpringCloudStreamApplication.class, args);
     }
 
