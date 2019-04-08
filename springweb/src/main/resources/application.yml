@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    platform: mysql
+    username: zykjopt
+    password: zykjopt
+    url: jdbc:mysql://192.168.10.47:3306/dmz
+mybatis:
+  mapper-locations: sqlmapper/*Mapper.xml
+server:
+  port: 10010
