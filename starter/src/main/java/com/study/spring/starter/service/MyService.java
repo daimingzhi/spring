@@ -15,4 +15,5 @@ public class MyService {
     public void say() {
         System.out.println("自定义的starter来了,say:" + config.getName());
     }
+
 }
