@@ -164,5 +164,4 @@ public class ActuatorSecurity extends WebSecurityConfigurerAdapter {
 ​	我们需要注意的是：
 
 > 在进行经过验证的HTTP请求时，`Principal`将被视为端点的`输入`，因此不会缓存响应。
-
-​	
+	
